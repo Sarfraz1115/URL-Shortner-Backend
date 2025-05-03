@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <header>
+        <h1 class="">URL Shortener</h1>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Shorten Your URL</h2>
+            <form method="POST" action="/url">
+                <label for="url">Enter your Original URL:</label>
+                <input type="text" id="url" name="url" placeholder="Enter your URL" required>
+                <button type="submit">Shorten</button>
+            </form>
+        </div>
+        <div class="result-container">
+            <% if (locals.id) { %>
+                <p>Your shortened URL:</p>
+                <a href="http://localhost:8001/url/<%= id %>" target="_blank">
+                    http://localhost:8001/url/<%= id %>
+                </a>
+                <!-- <</p> -->
+            <% } %>
+        </div>
+    </main>
+    <footer>
+        <p>Syed Sarfraz &copy; 2025 URL Shortener. All rights reserved.</p>
+    </footer>
+</body>
+</html>
