@@ -4,12 +4,12 @@ const path = require("path");
 const { connectDB } = require("./lib/connectiondb");
 const  route  = require("./routes/userroute");
 const  staticRoute  = require("./routes/staticRoute");
-const URL = require("./models/usermodel");
+// const URL = require("./models/usermodel");
 
 
 
 const app = express();
-const PORT = 8001;
+const PORT = 8000;
 dotenv.config();
 
 // setting view engine for rendering html pages
