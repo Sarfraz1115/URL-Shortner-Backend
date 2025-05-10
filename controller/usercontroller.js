@@ -13,7 +13,7 @@ async function Urlshortner(req, res) {
         OriginalUrl: body.url,
         visitHistory: [],
     })
-    return res.render("home", { id: ShortID });
+    return res.render("home", { id: ShortID, host: req.headers.host });
 
 }
 
